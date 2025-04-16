@@ -10,6 +10,19 @@
     "boot": "auto",
     "arch": ["armv7"],
     "init": false,
+    "ports": {
+        "7321/tcp": 7321
+    },
+    "ports_description": {
+        "7321/tcp": "Web interface"
+    },
+    "panel_icon": "mdi:earth",
+    "panel_title": "eWeLink Smart Home",
+    "webui": "http://[HOST]:[PORT:7321]",
+    "ingress": true,
+    "ingress_port": 7321,
+    "ingress_entry": "",
+    "homeassistant_api": true,
     "map": [
         "data:rw",
         "config:rw",
