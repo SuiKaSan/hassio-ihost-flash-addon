@@ -12,7 +12,6 @@
     "init": false,
     "panel_icon": "mdi:earth",
     "panel_title": "eWeLink Smart Home",
-    "host_network": false,
     "ingress": true,
     "ingress_port": 8324,
     "homeassistant_api": true,
