@@ -10,12 +10,12 @@
     "boot": "auto",
     "arch": ["armv7"],
     "init": false,
-    "ports": {
-        "8324/tcp": 8324
-    },
-    "ports_description": {
-        "8324/tcp": "Web interface"
-    },
+    // "ports": {
+    //     "8324/tcp": 8324
+    // },
+    // "ports_description": {
+    //     "8324/tcp": "Web interface"
+    // },
     "panel_icon": "mdi:earth",
     "panel_title": "eWeLink Smart Home",
     "ingress": true,
