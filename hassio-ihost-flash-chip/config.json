@@ -8,9 +8,8 @@
     "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-hardware-control",
     "startup": "application",
     "boot": "auto",
-    "arch": [
-        "armv7"
-    ],
+    "arch": ["armv7"],
+    "init": false,
     "map": [
         "data:rw",
         "config:rw",
@@ -33,7 +32,5 @@
     "hassio_role": "manager",
     "hassio_api": true,
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
-    "devices": [
-        "/dev/ttyS4"
-    ]
+    "devices": ["/dev/ttyS4"]
 }
