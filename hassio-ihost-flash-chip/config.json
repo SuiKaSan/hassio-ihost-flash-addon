@@ -14,6 +14,7 @@
     "panel_title": "eWeLink Smart Home",
     "ingress": true,
     "ingress_port": 8324,
+    "ingress_entry": "",
     "ports": {
         "8324/tcp": 8324
     },
