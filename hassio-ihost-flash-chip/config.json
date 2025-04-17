@@ -8,7 +8,7 @@
     "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-hardware-control",
     "startup": "application",
     "boot": "auto",
-    "arch": ["armv7"],
+    "arch": ["armv7", "amd64"],
     "init": false,
     "panel_icon": "mdi:earth",
     "panel_title": "eWeLink Smart Home",
