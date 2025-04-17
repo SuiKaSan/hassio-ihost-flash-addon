@@ -15,7 +15,7 @@
     "ingress": true,
     "ingress_port": 8324,
     "ports": {
-        "8324/tcp": null
+        "8324/tcp": 8324
     },
     "ports_description": {
         "8324/tcp": "Web interface"
