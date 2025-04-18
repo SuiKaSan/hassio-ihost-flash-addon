@@ -13,16 +13,6 @@
     "panel_icon": "mdi:earth",
     "panel_title": "eWeLink Smart Home",
     "ingress": true,
-    "ingress_port": 8324,
-    "ingress_entry": "",
-    "ports": {
-        "8324/tcp": 8324
-    },
-    "ports_description": {
-        "8324/tcp": "Web interface"
-    },
-    "host_network": true,
-    "webui": "http://[HOST]:[PORT:8324]",
     "homeassistant_api": true,
     "map": [
         "data:rw",
