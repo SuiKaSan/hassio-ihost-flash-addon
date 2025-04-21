@@ -14,6 +14,7 @@
     "panel_title": "eWeLink Smart Home",
     "ingress": true,
     "ingress_port": 8324,
+    "host_network": true,
     "homeassistant_api": true,
     "hassio_role": "manager",
     "hassio_api": true,
