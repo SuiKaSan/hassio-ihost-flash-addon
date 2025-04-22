@@ -10,7 +10,7 @@
     "boot": "auto",
     "arch": ["armv7"],
     "init": false,
-    "panel_icon": "mdi:earth",
+    "panel_icon": "mdi:memory-arrow-down",
     "panel_title": "SONOFF Dongle Quick Flasher For iHost",
     "ingress": true,
     "ingress_port": 8324,
