@@ -14,6 +14,7 @@
     "panel_title": "SONOFF Dongle Quick Flasher For iHost",
     "ingress": true,
     "ingress_port": 8324,
+    "ingress_stream": true,
     "host_network": true,
     "homeassistant_api": true,
     "hassio_role": "manager",
