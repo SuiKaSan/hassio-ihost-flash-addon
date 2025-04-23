@@ -1,6 +1,6 @@
 {
     "name": "SONOFF Dongle Quick Flasher For iHost",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "slug": "sonoff-dongle-quick-flasher-for-ihost",
     "description": "Just testing flash",
     "uart": true,
