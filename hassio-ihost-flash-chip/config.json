@@ -1,6 +1,6 @@
 {
     "name": "SONOFF Dongle Quick Flasher For iHost",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "slug": "sonoff-dongle-quick-flasher-for-ihost",
     "description": "Just testing flash",
     "uart": true,
@@ -17,7 +17,7 @@
     "ingress_stream": true,
     "host_network": true,
     "homeassistant_api": true,
-    "hassio_role": "admin",
+    "hassio_role": "default",
     "hassio_api": true,
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
     "devices": ["/dev/ttyS4"],
