@@ -17,8 +17,9 @@
     "ingress_stream": true,
     "host_network": true,
     "homeassistant_api": true,
-    "hassio_role": "manager",
+    "hassio_role": "admin",
     "hassio_api": true,
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
-    "devices": ["/dev/ttyS4"]
+    "devices": ["/dev/ttyS4"],
+    "map": ["config:rw"]
 }
