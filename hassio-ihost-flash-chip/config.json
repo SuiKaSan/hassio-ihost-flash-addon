@@ -19,23 +19,6 @@
     "homeassistant_api": true,
     "hassio_role": "default",
     "hassio_api": true,
-    "full_access": true,
-    "kernel_modules": true,
-    "privileged": [
-        "BPF",
-        "CHECKPOINT_RESTORE",
-        "DAC_READ_SEARCH",
-        "IPC_LOCK",
-        "NET_ADMIN",
-        "NET_RAW",
-        "PERFMON",
-        "SYS_ADMIN",
-        "SYS_MODULE",
-        "SYS_NICE",
-        "SYS_PTRACE",
-        "SYS_RAWIO",
-        "SYS_RESOURCE",
-        "SYS_TIME"
-    ],
+    "gpio": true,
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}"
 }
