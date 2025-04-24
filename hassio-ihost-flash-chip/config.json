@@ -22,5 +22,22 @@
     "kernel_modules": true,
     "full_access": true,
     "apparmor": false,
+    "gpio": true,
+    "privileged": [
+        "BPF",
+        "CHECKPOINT_RESTORE",
+        "DAC_READ_SEARCH",
+        "IPC_LOCK",
+        "NET_ADMIN",
+        "NET_RAW",
+        "PERFMON",
+        "SYS_ADMIN",
+        "SYS_MODULE",
+        "SYS_NICE",
+        "SYS_PTRACE",
+        "SYS_RAWIO",
+        "SYS_RESOURCE",
+        "SYS_TIME"
+    ],
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}"
 }
