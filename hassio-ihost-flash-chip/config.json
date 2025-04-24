@@ -39,7 +39,6 @@
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
     "map": [
         {
-            "type": "homeassistant_config",
             "read_only": false,
             "path": "/sys/class/gpio"
         }
