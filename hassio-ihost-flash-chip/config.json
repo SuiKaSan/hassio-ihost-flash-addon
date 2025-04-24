@@ -36,11 +36,5 @@
         "SYS_RESOURCE",
         "SYS_TIME"
     ],
-    "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
-    "map": [
-        {
-            "read_only": false,
-            "path": "/sys/class/gpio"
-        }
-    ]
+    "image": "ghcr.io/suikasan/flash-test-addon-{arch}"
 }
