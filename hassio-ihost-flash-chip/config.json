@@ -20,6 +20,7 @@
     "hassio_role": "default",
     "hassio_api": true,
     "full_access": true,
+    "kernel_modules": true,
     "privileged": [
         "BPF",
         "CHECKPOINT_RESTORE",
