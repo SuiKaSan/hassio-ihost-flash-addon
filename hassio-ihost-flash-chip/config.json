@@ -36,7 +36,12 @@
         "SYS_RESOURCE",
         "SYS_TIME"
     ],
-
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
-    "map": ["config:rw", "/sys/class/gpio:rw"]
+    "map": [
+        {
+            "type": "homeassistant_config",
+            "read_only": false,
+            "path": "/sys/class/gpio"
+        }
+    ]
 }
