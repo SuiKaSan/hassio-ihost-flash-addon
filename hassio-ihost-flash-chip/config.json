@@ -37,6 +37,7 @@
         "SYS_TIME"
     ],
     "image": "ghcr.io/suikasan/flash-test-addon-{arch}",
+    "gpio": true,
     "devices": ["/dev/ttyS4"],
     "map": ["config:rw"]
 }
