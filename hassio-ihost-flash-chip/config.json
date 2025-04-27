@@ -2,7 +2,7 @@
     "name": "SONOFF Dongle Flasher For iHost",
     "version": "0.0.1",
     "slug": "sonoff_dongle_flasher_for_ihost",
-    "description": "Just testing flash",
+    "description": "SONOFF Dongle Flasher For iHost plugin supports online flashing of the Zigbee NCP firmware of iHost MG21 provided that your Home Assistant is running in iHost via SD card",
     "uart": true,
     "udev": true,
     "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-hardware-control",
