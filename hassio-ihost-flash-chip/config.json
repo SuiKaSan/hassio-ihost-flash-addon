@@ -2,7 +2,7 @@
     "name": "SONOFF Dongle Flasher For iHost",
     "version": "0.0.1",
     "slug": "sonoff_dongle_flasher_for_ihost",
-    "description": "Upgrade the built-in MG21 (Zigbee coordinator) firmware on iHost with one-click flashing through the web interface.",
+    "description": "Flash the built-in MG21 (Zigbee coordinator) firmware on iHost with one-click flashing through the web interface.",
     "uart": true,
     "udev": true,
     "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-hardware-control",
