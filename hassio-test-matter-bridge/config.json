@@ -1,0 +1,59 @@
+{
+    "name": "iHost matter bridge",
+    "version": "1.3.0",
+    "slug": "ihost_matter_bridge",
+    "description": "ihost matter bridge.",
+    "uart": true,
+    "udev": true,
+    "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-sonoff-dongle-flasher",
+    "startup": "application",
+    "boot": "auto",
+    "arch": ["armv7"],
+    "init": false,
+    "panel_icon": "mdi:memory-arrow-down",
+    "panel_title": "iHost matter bridge",
+    "ingress": true,
+    "ingress_port": 3030,
+    "ingress_stream": true,
+    "host_network": true,
+    "homeassistant_api": true,
+    "hassio_role": "admin",
+    "hassio_api": true,
+    "kernel_modules": true,
+    "apparmor": false,
+    "gpio": true,
+    "privileged": [
+        "BPF",
+        "CHECKPOINT_RESTORE",
+        "DAC_READ_SEARCH",
+        "IPC_LOCK",
+        "NET_ADMIN",
+        "NET_RAW",
+        "PERFMON",
+        "SYS_ADMIN",
+        "SYS_MODULE",
+        "SYS_NICE",
+        "SYS_PTRACE",
+        "SYS_RAWIO",
+        "SYS_RESOURCE",
+        "SYS_TIME"
+    ],
+    "services": ["mqtt:need"],
+    "map": [
+        {
+            "type": "share",
+            "read_only": false
+        },
+        {
+            "type": "homeassistant_config",
+            "read_only": false,
+            "path": "/config"
+        }
+    ],
+    "image": "ghcr.io/suikasan/matter-bridge-test-{arch}",
+    "devices": ["/dev/teepriv0", "/dev/tee0"],
+    "ports": {
+        "3030/tcp": 3030,
+        "3040/tcp": 3040
+    }
+}
