@@ -1,5 +1,5 @@
 {
-    "name": "SONOFF Dongle Flasher For iHost",
+    "name": "Test Dongle Flasher For iHost",
     "version": "1.0.0",
     "slug": "sonoff_dongle_flasher_for_ihost",
     "description": "Flash the built-in MG21 (Zigbee coordinator) firmware on iHost with one-click flashing through the web interface.",
@@ -11,7 +11,7 @@
     "arch": ["armv7"],
     "init": false,
     "panel_icon": "mdi:memory-arrow-down",
-    "panel_title": "SONOFF Dongle Flasher For iHost",
+    "panel_title": "Test Dongle Flasher For iHost",
     "ingress": true,
     "ingress_port": 8324,
     "ingress_stream": true,
