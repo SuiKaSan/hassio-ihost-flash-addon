@@ -23,6 +23,7 @@
     "full_access": true,
     "apparmor": false,
     "gpio": true,
+    "usb": true,
     "privileged": ["SYS_ADMIN", "SYS_MODULE", "SYS_RAWIO", "SYS_RESOURCE"],
     "map": [
         "data:rw",
