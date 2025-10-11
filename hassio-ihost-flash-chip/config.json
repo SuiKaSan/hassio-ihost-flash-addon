@@ -25,11 +25,10 @@
     "gpio": true,
     "privileged": ["SYS_ADMIN", "SYS_MODULE", "SYS_RAWIO", "SYS_RESOURCE"],
     "map": [
-        "data:rw",
-        "config:rw",
         {
-            "type": "share",
-            "read_only": false
+            "type": "addon_config",
+            "read_only": false,
+            "path": "/Sonoff-Dongle-Flasher-For-IHost"
         },
         {
             "type": "homeassistant_config",
