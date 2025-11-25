@@ -1,5 +1,5 @@
 name: Node Red TEST
-version: 20.2.2
+version: 20.2.3
 slug: node_red_test
 description: Test
 url: https://github.com/hassio-addons/addon-node-red
