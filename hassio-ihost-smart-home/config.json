@@ -17,6 +17,7 @@
     "homeassistant_api": true,
     "hassio_role": "admin",
     "hassio_api": true,
+    "services": ["mqtt:need"],
     "map": [
         {
             "type": "addon_config",
@@ -25,10 +26,16 @@
         }
     ],
     "options": {
-        "data_path": "/config/Test-Sonoff-Smart-Home-Addon"
+        "data_path": "/config/Test-Sonoff-Smart-Home-Addon",
+        "mqtt": {}
     },
     "schema": {
-        "data_path": "str"
+        "data_path": "str",
+        "mqtt": {
+            "server": "str?",
+            "username": "str?",
+            "password": "str?"
+        }
     },
     "image": "ghcr.io/suikasan/ha-smart-home-addon-{arch}"
 }
