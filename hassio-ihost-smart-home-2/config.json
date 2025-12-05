@@ -1,0 +1,41 @@
+{
+    "name": "Test Smart Home Add-on 2",
+    "version": "1.0.6",
+    "slug": "test_sonoff_smart_home_addon_2",
+    "description": "This is description",
+    "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-hardware-control",
+    "startup": "application",
+    "boot": "auto",
+    "arch": ["armv7", "aarch64", "amd64"],
+    "init": false,
+    "panel_icon": "mdi:memory-arrow-down",
+    "panel_title": "Test Smart Home Add-on 2",
+    "ingress": true,
+    "ingress_port": 8325,
+    "ingress_stream": true,
+    "host_network": true,
+    "homeassistant_api": true,
+    "hassio_role": "admin",
+    "hassio_api": true,
+    "services": ["mqtt:need"],
+    "map": [
+        {
+            "type": "addon_config",
+            "read_only": false,
+            "path": "/Test-Sonoff-Smart-Home-Addon-2"
+        }
+    ],
+    "options": {
+        "data_path": "/config/Test-Sonoff-Smart-Home-Addon-2",
+        "mqtt": {}
+    },
+    "schema": {
+        "data_path": "str",
+        "mqtt": {
+            "server": "str?",
+            "username": "str?",
+            "password": "str?"
+        }
+    },
+    "image": "ghcr.io/suikasan/ha-smart-home-addon-2-{arch}"
+}
