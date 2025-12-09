@@ -20,11 +20,11 @@ if [ "$BOARD" != "ihost" ]; then
     bashio::log.info "We are not in iHost environment, current board: $BOARD"
 fi
 
-FLASHER_INFO=$(bashio::addons "sonoff_dongle_flasher_for_ihost")
+FLASHER_INFO=$(bashio::addons "sonoff_dongle_flasher_for_ihost_2")
 bashio::log.info "Flasher Addon info: $FLASHER_INFO"
 
 
-FLASHER_STATE=$(bashio::addon.state "sonoff_dongle_flasher_for_ihost")
+FLASHER_STATE=$(bashio::addon.state "sonoff_dongle_flasher_for_ihost_2")
 bashio::log.info "Flasher Addon state: $FLASHER_STATE"
 
 if bashio::config.true 'enable_conflict_detection'; then
