@@ -20,21 +20,24 @@ if [ "$BOARD" != "ihost" ]; then
     bashio::log.info "We are not in iHost environment, current board: $BOARD"
 fi
 
-bashio::log.info "This is a new version of add-on"
+bashio::log.info "This is a new version of add-on 1.4.6 with conflict detection feature."
 
 
 # 根据“短 slug”（config.json 里的那个）查找完整 slug
 find_addon_full_slug() {
     local short_slug=$1
+    bashio::log.info "Finding full slug for short slug: ${short_slug}"
 
     # 取出所有已安装 add-on 的完整 slug 列表
     local installed
     installed="$(bashio::addons.installed)" || return 1
+    bashio::log.info "Installed addons: ${installed}"
 
     # 从中挑出以 "_短slug" 结尾的那一个
     # 例如：81bc2df9_nodered 以 "_nodered" 结尾
     local full_slug
     full_slug="$(grep "_${short_slug}$" <<< "${installed}" | head -n 1)"
+    bashio::log.info "Found full slug: ${full_slug}"
 
     if bashio::var.is_empty "${full_slug}"; then
         return 1
