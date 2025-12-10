@@ -52,19 +52,32 @@ find_addon_full_slug() {
     echo "$full_slug"
 }
 
-# 示例：查某个 add-on 的 state
-short="sonoff_dongle_flasher_for_ihost_2"
-FULL_SLUG="$(find_addon_full_slug "${short}")" || {
-    bashio::log.warning "Addon with short slug '${short}' not found"
-}
-
-if ! bashio::var.is_empty "${FULL_SLUG}"; then
-    STATE="$(bashio::addon.state "${FULL_SLUG}")"
-    bashio::log.info "Addon ${FULL_SLUG} state: ${STATE}"
-fi
-
+# ============================================================
+# 冲突检测逻辑（根据你的需求）
+# 条件：
+#   1. enable_conflict_detection = true
+#   2. 目标 add-on已启动
+#   → 阻止本 add-on 启动
+# ============================================================
 if bashio::config.true 'enable_conflict_detection'; then
     bashio::log.info "Conflict detection enabled"
+
+    TARGET_SHORT_SLUG="sonoff_dongle_flasher_for_ihost_2"
+
+    FULL_SLUG="$(find_addon_full_slug "${TARGET_SHORT_SLUG}")" || {
+        bashio::log.warning "Target addon not found, skip conflict detection"
+        FULL_SLUG=""
+    }
+
+    if ! bashio::var.is_empty "${FULL_SLUG}"; then
+        STATE="$(bashio::addon.state "${FULL_SLUG}" 2>/dev/null || echo "unknown")"
+        bashio::log.info "Addon ${FULL_SLUG} state: ${STATE}"
+
+        if [ "${STATE}" = "started" ]; then
+            bashio::log.fatal "Conflict detected: ${FULL_SLUG} is running. Aborting startup."
+            exit 1
+        fi
+    fi
 else
     bashio::log.info "Conflict detection not enabled"
 fi
