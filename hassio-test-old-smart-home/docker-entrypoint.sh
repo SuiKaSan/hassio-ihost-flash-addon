@@ -20,6 +20,9 @@ if [ "$BOARD" != "ihost" ]; then
     bashio::log.info "We are not in iHost environment, current board: $BOARD"
 fi
 
+bashio::log.info "This is a new version of add-on"
+
+
 # 根据“短 slug”（config.json 里的那个）查找完整 slug
 find_addon_full_slug() {
     local short_slug=$1
