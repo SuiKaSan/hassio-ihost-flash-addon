@@ -22,30 +22,34 @@ fi
 
 bashio::log.info "This is a new version of add-on 1.4.6 with conflict detection feature."
 
-
-# 根据“短 slug”（config.json 里的那个）查找完整 slug
 find_addon_full_slug() {
     local short_slug=$1
+    local installed full_slug line
+
     bashio::log.info "Finding full slug for short slug: ${short_slug}"
 
-    # 取出所有已安装 add-on 的完整 slug 列表
-    local installed
-    # installed="$(bashio::addons.installed)" || return 1
+    # 获取列表
     installed="$(bashio::addons)" || return 1
-    # bashio::log.info "Installed addons: ${installed}"
-    bashio::log.info "addons: ${addons}"
+    bashio::log.info "Installed addons raw: $(printf '%s' "$installed")"
 
-    # 从中挑出以 "_短slug" 结尾的那一个
-    # 例如：81bc2df9_nodered 以 "_nodered" 结尾
-    local full_slug
-    full_slug="$(grep "_${short_slug}$" <<< "${installed}" | head -n 1)"
-    bashio::log.info "Found full slug: ${full_slug}"
+    # 按行扫描，不受控制字符干扰
+    while IFS= read -r line; do
+        # 输出每一行进行调试
+        bashio::log.info "Checking addon entry: $line"
+
+        if [[ "$line" == *"_${short_slug}" ]]; then
+            full_slug="$line"
+            break
+        fi
+    done <<< "$installed"
 
     if bashio::var.is_empty "${full_slug}"; then
+        bashio::log.warning "No full slug found for ${short_slug}"
         return 1
     fi
 
-    echo "${full_slug}"
+    bashio::log.info "Found match: ${full_slug}"
+    echo "$full_slug"
 }
 
 # 示例：查某个 add-on 的 state
