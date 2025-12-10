@@ -31,7 +31,9 @@ find_addon_full_slug() {
     # 取出所有已安装 add-on 的完整 slug 列表
     local installed
     installed="$(bashio::addons.installed)" || return 1
+    addons="$(bashio::addons)" || return 1
     bashio::log.info "Installed addons: ${installed}"
+    bashio::log.info "addons: ${addons}"
 
     # 从中挑出以 "_短slug" 结尾的那一个
     # 例如：81bc2df9_nodered 以 "_nodered" 结尾
