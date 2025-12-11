@@ -62,7 +62,7 @@ find_addon_full_slug() {
 if bashio::config.true 'enable_conflict_detection'; then
     bashio::log.info "Conflict detection enabled"
 
-    TARGET_SHORT_SLUG="sonoff_dongle_flasher_for_ihost_2"
+    TARGET_SHORT_SLUG="test_sonoff_smart_home_addon_2"
 
     FULL_SLUG="$(find_addon_full_slug "${TARGET_SHORT_SLUG}")" || {
         bashio::log.warning "Target addon not found, skip conflict detection"
