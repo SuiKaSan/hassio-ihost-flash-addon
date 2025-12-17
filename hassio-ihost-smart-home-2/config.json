@@ -26,7 +26,7 @@
         }
     ],
     "options": {
-        "data_path": "/config/Test-Sonoff-Smart-Home-Addon-2",
+        "data_path": "/Test-Sonoff-Smart-Home-Addon-2",
         "mqtt": {}
     },
     "schema": {
