@@ -37,5 +37,6 @@
             "password": "str?"
         }
     },
-    "image": "ghcr.io/suikasan/ha-smart-home-addon-{arch}"
+    "image": "ghcr.io/suikasan/ha-smart-home-addon-{arch}",
+    "homeassistant": "2025.9.2"
 }

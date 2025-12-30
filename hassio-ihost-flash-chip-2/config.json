@@ -44,5 +44,6 @@
     "schema": {
         "data_path": "str"
     },
-    "image": "ghcr.io/suikasan/flash-test-addon-2-{arch}"
+    "image": "ghcr.io/suikasan/flash-test-addon-2-{arch}",
+    "homeassistant": "2025.9.2"
 }
