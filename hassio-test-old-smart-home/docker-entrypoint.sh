@@ -13,10 +13,8 @@ find_addon_full_slug() {
     bashio::log.info "Finding full slug for short slug: ${short_slug}"
 
     installed="$(bashio::addons)" || return 1
-    # bashio::log.info "Installed addons raw: $(printf '%s' "$installed")"
 
     while IFS= read -r line; do
-        # bashio::log.info "Checking addon entry: $line"
 
         if [[ "$line" == *"_${short_slug}" ]]; then
             full_slug="$line"
