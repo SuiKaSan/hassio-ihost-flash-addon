@@ -1,6 +1,6 @@
 {
     "name": "Test Smart Home Add-on 2",
-    "version": "1.0.87",
+    "version": "1.0.88",
     "slug": "test_sonoff_smart_home_addon_2",
     "description": "This is description",
     "url": "https://github.com/iHost-Open-Source-Project/hassio-ihost-addon/tree/master/hassio-ihost-hardware-control",
